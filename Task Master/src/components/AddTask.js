@@ -6,7 +6,7 @@ export const AddTask = ({tasklist, setTasklist , task,setTask}) => {
     if(task.id){
        const date = new Date();
        const updatedtasklist = tasklist.map((todo) => (
-        todo.id === task.id ? {id: task.id, name: task.name, time:`${date.toLocaleDateString()} ${date.toLocaleDateString()}` } : todo
+        todo.id === task.id ? {id: task.id, name: task.name, time:`${date.toLocaleTimeString()} ${date.toLocaleDateString()}` } : todo
        ))
            setTasklist(updatedtasklist);
            setTask({});
@@ -15,7 +15,7 @@ export const AddTask = ({tasklist, setTasklist , task,setTask}) => {
         const newTask = {
             id: date.getTime(),
             name: e.target.task.value,
-            time: `${date.toLocaleDateString()} ${date.toLocaleDateString()}`
+            time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`
         }
         setTasklist([...tasklist,newTask]);
        setTask({});
