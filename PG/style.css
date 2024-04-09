@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-image: url('1.gif');
+  background-image: url('./assets/1.gif');
   background-size: 1600px 800px;
   background-repeat: no-repeat;
   display: flex;
