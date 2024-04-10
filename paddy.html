@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mental Health Assessment</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+    label {
+        font-weight: bold;
+        color: #555;
+    }
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+    .submit-btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .submit-btn:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Mental Health Assessment</h2>
+    <form id="assessmentForm">
+        <label for="question1">1. Do you often feel overwhelming sadness or emptiness?</label><br>
+        <input type="radio" id="question1_yes" name="question1" value="1"> <label for="question1_yes">Yes</label>
+        <input type="radio" id="question1_no" name="question1" value="0"> <label for="question1_no">No</label><br>
+
+        <label for="question2">2. Have you experienced a loss or trauma that continues to affect you?</label><br>
+        <input type="radio" id="question2_yes" name="question2" value="1"> <label for="question2_yes">Yes</label>
+        <input type="radio" id="question2_no" name="question2" value="0"> <label for="question2_no">No</label><br>
+
+        <label for="question3">3. Are you finding it difficult to enjoy activities you once liked?</label><br>
+        <input type="radio" id="question3_yes" name="question3" value="1"> <label for="question3_yes">Yes</label>
+        <input type="radio" id="question3_no" name="question3" value="0"> <label for="question3_no">No</label><br>
+
+        <label for="question4">4. Do you frequently feel anxious or worried without a specific cause?</label><br>
+        <input type="radio" id="question4_yes" name="question4" value="1"> <label for="question4_yes">Yes</label>
+        <input type="radio" id="question4_no" name="question4" value="0"> <label for="question4_no">No</label><br>
+
+        <label for="question5">5. Have you noticed changes in your sleep patterns, such as insomnia or oversleeping?</label><br>
+        <input type="radio" id="question5_yes" name="question5" value="1"> <label for="question5_yes">Yes</label>
+        <input type="radio" id="question5_no" name="question5" value="0"> <label for="question5_no">No</label><br>
+
+        <label for="question6">6. Do you struggle with maintaining focus or making decisions?</label><br>
+        <input type="radio" id="question6_yes" name="question6" value="1"> <label for="question6_yes">Yes</label>
+        <input type="radio" id="question6_no" name="question6" value="0"> <label for="question6_no">No</label><br>
+
+        <label for="question7">7. Have you had thoughts of self-harm or suicide?</label><br>
+        <input type="radio" id="question7_yes" name="question7" value="1"> <label for="question7_yes">Yes</label>
+        <input type="radio" id="question7_no" name="question7" value="0"> <label for="question7_no">No</label><br>
+
+        <label for="question8">8. Isolating yourself from friends and family more than usual?</label><br>
+        <input type="radio" id="question8_yes" name="question8" value="1"> <label for="question8_yes">Yes</label>
+        <input type="radio" id="question8_no" name="question8" value="0"> <label for="question8_no">No</label><br>
+
+        <label for="question9">9. Do you experience extreme mood swings that affect your daily life?</label><br>
+        <input type="radio" id="question9_yes" name="question9" value="1"> <label for="question9_yes">Yes</label>
+        <input type="radio" id="question9_no" name="question9" value="0"> <label for="question9_no">No</label><br>
+
+        <label for="question10">10. Are you having trouble coping with stress and everyday challenges?</label><br>
+        <input type="radio" id="question10_yes" name="question10" value="1"> <label for="question10_yes">Yes</label>
+        <input type="radio" id="question10_no" name="question10" value="0"> <label for="question10_no">No</label><br>
+
+        <input type="submit" value="Submit" class="submit-btn">
+    </form>
+</div>
+
+<script>
+    document.getElementById("assessmentForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        let totalScore = 0;
+
+        // Calculate total score
+        totalScore += parseInt(document.querySelector('input[name="question1"]:checked').value);
+        totalScore += parseInt(document.querySelector('input[name="question2"]:checked').value);
+        totalScore += parseInt(document.querySelector('input[name="question3"]:checked').value);
+        totalScore += parseInt(document.querySelector('input[name="question4"]:checked').value);
+        totalScore += parseInt(document.querySelector('input[name="question5"]:checked').value);
+        totalScore += parseInt(document.querySelector('input[name="question6"]:checked').value);
+        totalScore += parseInt(document.querySelector('input[name="question7"]:checked').value);
+        totalScore += parseInt(document.querySelector('input[name="question8"]:checked').value);
+        totalScore += parseInt(document.querySelector('input[name="question9"]:checked').value);
+        totalScore += parseInt(document.querySelector('input[name="question10"]:checked').value);
+
+        alert("Total Score: " + totalScore);
+    });
+</script

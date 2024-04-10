@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Feedback Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+    label {
+        font-weight: bold;
+        color: #555;
+    }
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .radio-label {
+        margin-right: 10px;
+        color: #555;
+    }
+    .submit-btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .submit-btn:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Patient Feedback Form</h2>
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullName">Full Name:</label><br>
+            <input type="text" id="fullName" name="fullName" required><br>
+            <label for="age">Age:</label><br>
+            <input type="text" id="age" name="age" required><br>
+            <label for="gender">Gender:</label><br>
+            <input type="text" id="gender" name="gender" required><br>
+            <label for="contactNumber">Contact Number:</label><br>
+            <input type="text" id="contactNumber" name="contactNumber" required><br>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="dateOfVisit">Date of Visit:</label><br>
+            <input type="text" id="dateOfVisit" name="dateOfVisit" required><br>
+        </fieldset>
+        <fieldset>
+            <legend>Hospital Experience</legend>
+            <!-- Hospital Experience Questions -->
+        </fieldset>
+        <fieldset>
+            <legend>Doctor's Feedback</legend>
+            <!-- Doctor's Performance Questions -->
+        </fieldset>
+        <fieldset>
+            <legend>Additional Comments</legend>
+            <label for="additionalComments">Please share any additional comments or suggestions:</label><br>
+            <textarea id="additionalComments" name="additionalComments" rows="4"></textarea><br>
+        </fieldset>
+        <input type="submit" value="Submit" class="submit-btn">
+    </form>
+</div>
+
+</body>
+</html>
